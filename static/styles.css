@@ -1,15 +1,16 @@
 :root {
-    --primary: #6C63FF;
-    --bg: linear-gradient(145deg, #f0f0f3, #e2e2e6);
-    --text: #1a1a1a;
-    --glass: rgba(255, 255, 255, 0.4);
-    --shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    --primary: #1B3C53;
+    --secondary: #456882;
+    --accent: #D2C1B6;
+    --background: #F9F3EF;
+    --text: #1B3C53;
     --border-radius: 16px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
+    background: var(--background);
     margin: 0;
     padding: 40px 20px;
     display: flex;
@@ -26,8 +27,7 @@ h1 {
 }
 
 form {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
+    background: var(--accent);
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -39,16 +39,18 @@ form {
     margin-bottom: 30px;
     max-width: 700px;
     width: 100%;
+    border: 1px solid var(--secondary);
 }
 
 input[type="text"],
 input[type="datetime-local"] {
     padding: 10px 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary);
     border-radius: 12px;
     font-size: 1rem;
     background: #fff;
     flex: 1 1 200px;
+    color: var(--primary);
 }
 
 button {
@@ -63,7 +65,7 @@ button {
 }
 
 button:hover {
-    background-color: #5848e5;
+    background-color: #152b3e;
 }
 
 ul {
@@ -74,15 +76,17 @@ ul {
 }
 
 li {
-    background: white;
+    background: #ffffff;
     margin-bottom: 12px;
     padding: 16px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    border-left: 5px solid var(--secondary);
     display: flex;
     flex-direction: column;
     gap: 10px;
     transition: all 0.3s ease;
+    color: var(--primary);
 }
 
 li span {
@@ -90,20 +94,22 @@ li span {
 }
 
 li small {
-    color: #666;
+    color: #555;
     font-size: 0.9rem;
 }
 
 li button {
-    background-color: #ff4757;
+    background-color: #c0392b;
     font-size: 0.85rem;
     padding: 8px 14px;
     border-radius: 10px;
     margin-top: 4px;
+    color: #fff;
+    border: none;
 }
 
 li button:nth-child(2) {
-    background-color: #2ed573;
+    background-color: #27ae60;
 }
 
 li button:disabled {
@@ -113,5 +119,5 @@ li button:disabled {
 
 #chosen-date {
     font-size: 0.9rem;
-    color: #444;
+    color: var(--secondary);
 }
